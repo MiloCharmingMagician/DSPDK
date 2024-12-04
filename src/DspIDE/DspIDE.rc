@@ -1,0 +1,406 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DSPIDE              ICON                    "resources/icons/DspIDE.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_DSPIDE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                0
+        MENUITEM "&Open...\tCtrl+O",            0
+        MENUITEM "&Close",                      0
+        MENUITEM "&Save\tCtrl+S",               0
+        MENUITEM "Save &As...",                 0
+        MENUITEM SEPARATOR
+        MENUITEM "Load Program...",             0
+        MENUITEM "Reload Program",              0
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           0, GRAYED
+        MENUITEM "Print Pre&view",              0, GRAYED
+        MENUITEM "P&rint Setup...",             0, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 0, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               0, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                0, GRAYED
+        MENUITEM "&Copy\tCtrl+C",               0, GRAYED
+        MENUITEM "&Paste\tCtrl+V",              0, GRAYED
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    0
+        MENUITEM "&Status Bar",                 0
+    END
+    POPUP "&Debug"
+    BEGIN
+        MENUITEM "&Go\tF6",                     0
+        MENUITEM "&Step\tF5",                   0
+        MENUITEM "Go to &Cursor",               0
+        MENUITEM SEPARATOR
+        MENUITEM "&Pause",                      0
+        MENUITEM "&Restart\tF7",                0
+        MENUITEM "Stop &Debugging",             0
+        MENUITEM SEPARATOR
+        POPUP "Triggle &Interrupt"
+        BEGIN
+            MENUITEM "0x8000--Reset",               0
+            MENUITEM "0x0002--ERR",                 0
+            MENUITEM "0x0004--Trap",                0
+            MENUITEM "0x0006--NMI",                 0
+            MENUITEM "0x0008--ACRS",                0
+            MENUITEM "0x000A--ACWE",                0
+            MENUITEM "0x000C--AI",                  0
+            MENUITEM "0x000E--CPU",                 0
+        END
+        POPUP "&Clear Interrupt"
+        BEGIN
+            MENUITEM "0x8000--Reset",               0
+            MENUITEM "0x0002--ERR",                 0
+            MENUITEM "0x0004--Trap",                0
+            MENUITEM "0x0006--NMI",                 0
+            MENUITEM "0x0008--ACRS",                0
+            MENUITEM "0x000A--ACWE",                0
+            MENUITEM "0x000C--AI",                  0
+            MENUITEM "0x000E--CPU",                 0
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Breakpoints ...",            0
+        MENUITEM "&Toggle breakpoint",          0
+        MENUITEM SEPARATOR
+        MENUITEM "Verification",                0
+    END
+    POPUP "&Environment"
+    BEGIN
+        MENUITEM "&Configuration ...",          0
+        MENUITEM SEPARATOR
+        MENUITEM "&DMEM-IO Map File ...",       0
+        MENUITEM "&Load ROM to DMEM ...",       0
+        MENUITEM "&Dump DMem to File ...",      0
+        MENUITEM "CPU &Behavior...",            0
+        MENUITEM SEPARATOR
+        MENUITEM "&Load Environment",           0
+        MENUITEM "&Save Environment",           0
+        MENUITEM SEPARATOR
+        MENUITEM "&Run Batch ...",              0, GRAYED
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 0, GRAYED
+        MENUITEM "&Cascade",                    0
+        MENUITEM "&Tile",                       0
+        MENUITEM "&Arrange Icons",              0
+        MENUITEM SEPARATOR
+        MENUITEM "Message",                     0, GRAYED
+        MENUITEM "Project",                     0, GRAYED
+        MENUITEM "Disassembly",                 0
+        MENUITEM SEPARATOR
+        MENUITEM "Program Counter",             0
+        MENUITEM "Address Register",            0
+        MENUITEM "Arithmetic Register",         0
+        MENUITEM "Stack",                       0
+        MENUITEM "Flag",                        0
+        MENUITEM "Instruction Memory",          0
+        MENUITEM "Data Memory",                 0
+        MENUITEM SEPARATOR
+        MENUITEM "Memory Map Register",         0
+        MENUITEM "deADPCM  Register",           0
+        MENUITEM "Main Memory",                 0
+        MENUITEM "Audio Ram",                   0
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                0, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_DSPIDE ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 143, 82
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About DspIDE"
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    ICON            IDI_DSPIDE,IDC_MYICON,11,17,20,20
+    LTEXT           "DSP IDE Version 1.0 Beta 1",IDC_STATIC,40,10,100,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2023-2024",IDC_STATIC,40,25,89,8
+    DEFPUSHBUTTON   "OK",IDOK,50,60,45,14,WS_GROUP
+    LTEXT           "Cyndanera Llc.",IDC_STATIC,40,40,80,10
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Cyndanera"
+            VALUE "FileDescription", "DspIDE"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "DspIDE"
+            VALUE "LegalCopyright", "Copyright � 2024"
+            VALUE "LegalTrademarks", "Cyndanera"
+            VALUE "OriginalFilename", "DspIDE.exe"
+            VALUE "ProductName", "Cyndanera DspIDE"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "resources\\bitmaps\\iconb1.bmp"
+IDB_BITMAP2             BITMAP                  "resources\\bitmaps\\iconb2.bmp"
+IDB_BITMAP3             BITMAP                  "resources\\bitmaps\\iconb3.bmp"
+IDB_BITMAP4             BITMAP                  "resources\\bitmaps\\iconb4.bmp"
+IDB_BITMAP5             BITMAP                  "resources\\bitmaps\\iconb5.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR                  "resources\\cursors\\cursor1.cur"
+IDC_CURSOR2             CURSOR                  "resources\\cursors\\cursor2.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "DspIDE"
+    IDC_DSPIDE              "DSPIDE"
+    IDS_STR1	"\nDspIDE\nDspIDE\nBIN Files(*.bin)\n.bin\nDspIDE.Document\nDspIDE Document"
+    IDS_STR2 	"Load program."
+    IDS_STR3 	"Can NOT load program."
+    IDS_STR4 	"Open Data File"
+    IDS_STR5 	"\nText\nText Document\n\n\nText.Document\nText Document"
+    IDS_STR6 	"Load the .bin file\nLoad BIN File"
+    IDS_STR7 	"Show messages\nMessage"
+    IDS_STR8 	"Show project window\nProject"
+    IDS_STR9 	"Show assembly window\nAssembly"
+    IDS_STR10 	"Show program counter and cycles\nPC"
+    IDS_STR11 	"Show and modify instruction memory."
+    IDS_STR12 	"Show and modify address registers\nAddr Reg."
+    IDS_STR13 	"Show and modify arithmetic registers\nArith Reg."
+    IDS_STR14 	"Show and modify PSR\nPSR"
+    IDS_STR15 	"Show and modify the stacks\\Stacks"
+    IDS_STR16 	"Show and modify data memory\nDMEM"
+    IDS_STR17 	"Show and modify instruction memory\\IMEM"
+    IDS_STR18 	"Compile this file\nCompile this file"
+    IDS_STR19 	"Build the project\nBuild the Project"
+    IDS_STR20 	"Rebuild the project\nRebuild the Project"
+    IDS_STR21 	"Step over the next statement\nStep"
+    IDS_STR22 	"Free run to breakpoint\nGo"
+    IDS_STR23 	"Restart the current program\nRestart"
+    IDS_STR24 	"Stop debugging the current program\nStop"
+    IDS_STR25 	"Setup breakpoints"
+    IDS_STR26 	"Toggle the breakpoint on cursor\nToggle Breakpoint"
+    IDS_STR27 	"Free run to cursor or breakpoint\nGo to Cursor"
+    IDS_STR28 	"Pause the simulator\nPause"
+    IDS_STR29 	"Reload .bin file\nReload Program"
+    IDS_STR30 	"Memory to I/O mapping\nDMem to IO"
+    IDS_STR31 	"Load ROM data to Data Memory\nLoad Rom Data"
+    IDS_STR32 	"Load environment\nLoad Env."
+    IDS_STR33 	"Save environment\nSave Env."
+    IDS_STR34 	"Goto"
+    IDS_STR35 	"Goto bottom"
+    IDS_STR36 	"Goto top"
+    IDS_STR37 	"Show number as Binary.\nBin"
+    IDS_STR38 	"Show number as unsigned dec.\nUnsigned Dec"
+    IDS_STR39 	"Show number as signed dec.\nSigned Dec"
+    IDS_STR40 	"Dump data memory to files\nDump DMem"
+    IDS_STR41 	"Configure the environment\nConfiguration"
+    IDS_STR42 	"Interrupt"
+    IDS_STR43 	"Memory map registers.\nMem Map Reg."
+    IDS_STR44 	"Open main memory window\nMain Memory"
+    IDS_STR45 	"For Help, press F1"
+    IDS_STR46 	"Select an object on which to get Help"
+    IDS_STR47 	"Create a new document\nNew"
+    IDS_STR48 	"Open an existing document\nOpen"
+    IDS_STR49 	"Close the active document\nClose"
+    IDS_STR50 	"Save the active document\nSave"
+    IDS_STR51 	"Save the active document with a new name\nSave As"
+    IDS_STR52 	"Change the printing options\nPage Setup"
+    IDS_STR53 	"Change the printer and printing options\nPrint Setup"
+    IDS_STR54 	"Print the active document\nPrint"
+    IDS_STR55 	"Display full pages\nPrint Preview"
+    IDS_STR56 	"Open this document"
+    IDS_STR57 	"Open this document"
+    IDS_STR58 	"Open this document"
+    IDS_STR59 	"Open this document"
+    IDS_STR60 	"Open this document"
+    IDS_STR61 	"Open this document"
+    IDS_STR62 	"Open this document"
+    IDS_STR63 	"Open this document"
+    IDS_STR64 	"Open this document"
+    IDS_STR65 	"Open this document"
+    IDS_STR66 	"Open this document"
+    IDS_STR67 	"Open this document"
+    IDS_STR68 	"Open this document"
+    IDS_STR69 	"Open this document"
+    IDS_STR70 	"Open this document"
+    IDS_STR71 	"Open this document"
+    IDS_STR72 	"Erase the selection\nErase"
+    IDS_STR73 	"Erase everything\nErase All"
+    IDS_STR74 	"Copy the selection and put it on the Clipboard\nCopy"
+    IDS_STR75 	"Cut the selection and put it on the Clipboard\nCut"
+    IDS_STR76 	"Find the specified text\nFind"
+    IDS_STR77 	"Insert Clipboard contents\nPaste"
+    IDS_STR78 	"Repeat the last action\nRepeat"
+    IDS_STR79 	"Replace specific text with different text\nReplace"
+    IDS_STR80 	"Select the entire document\nSelect All"
+    IDS_STR81 	"Undo the last action\nUndo"
+    IDS_STR82 	"Redo the previously undone action\nRedo"
+    IDS_STR83 	"Open another window for the active document\nNew Window"
+    IDS_STR84 	"Arrange icons at the bottom of the window\nArrange Icons"
+    IDS_STR85 	"Arrange windows so they overlap\nCascade Windows"
+    IDS_STR86 	"Arrange windows as non-overlapping tiles\nTile Windows"
+    IDS_STR87 	"Arrange windows as non-overlapping tiles\nTile Windows"
+    IDS_STR88 	"Split the active window into panes\nSplit"
+    IDS_STR89 	"Display program information, version number and copyright\nAbout"
+    IDS_STR90 	"Quit the application; prompts to save documents\nExit"
+    IDS_STR91 	"Opens Help\nHelp Topics"
+    IDS_STR92 	"List Help topics\nHelp Topics"
+    IDS_STR93 	"Display instructions about how to use help\nHelp"
+    IDS_STR94 	"Display help for clicked on buttons, menus and windows\nHelp"
+    IDS_STR95 	"Display help for current task or command\nHelp"
+    IDS_STR96 	"Switch to the next window pane\nNext Pane"
+    IDS_STR97 	"Switch back to the previous window pane\nPrevious Pane"
+    IDS_STR98 	"EXT"
+    IDS_STR99 	"CAP"
+    IDS_STR100 	"NUM"
+    IDS_STR101 	"SCRL"
+    IDS_STR102 	"OVR"
+    IDS_STR103 	"REC"
+    IDS_STR104 	"Show or hide the toolbar\nToggle ToolBar"
+    IDS_STR105 	"Show or hide the status bar\nToggle StatusBar"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
